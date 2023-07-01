@@ -1,0 +1,22 @@
+Now, let's break down the code:
+
+We define a function twoSum that takes an array nums and a target number target as input.
+
+Inside the function, we create a new Map object named hashMap. This map will store the elements of the array as keys and their indices as values.
+
+We start a for loop to iterate through the array nums using the index i.
+
+Inside the loop, we calculate the complement value by subtracting the current element nums[i] from the target.
+
+We check if the hashMap already has the complement value as a key using the has method. If it does, it means we have found the two numbers that add up to the target.
+
+If the complement exists in the hashMap, we retrieve its corresponding index using the get method and return the indices of the two numbers as an array, [hashMap.get(complement), i].
+
+If the complement does not exist in the hashMap, we add the current element nums[i] as a key and its index i as the corresponding value in the hashMap using the set method.
+
+After the loop, if no solution is found, we return an empty array [].
+
+This algorithm utilizes the Map data structure to store elements and their indices,
+allowing us to perform constant time lookups to find the complement. By iterating through the array once,
+the algorithm achieves a time complexity of O(n), making it more efficient than a brute-force solution
+with a time complexity of O(n^2).
